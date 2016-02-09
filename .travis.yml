@@ -9,6 +9,6 @@ before_install:
   - ~/install_sdkman.sh
   - echo sdkman_auto_answer=true > ~/.sdkman/etc/config
   - source "/home/travis/.sdkman/bin/sdkman-init.sh"
-  - sdk install springboot 1.3.0.RELEASE
+  - sdk install springboot 1.3.2.RELEASE
 
 script: test/run.sh
