@@ -8,14 +8,10 @@ killall "java"
 echo "Let's look at the actual results: `cat actual.html`"
 echo "And compare it to: `cat ../test/expected.html`"
 
-if diff -w ../test/expected.html actual.html
-    then
-        echo SUCCESS
-        let ret=0
-    else
-        echo FAIL
-        let ret=255
-        exit $ret
+if diff -w ../test/expected.html actual.html; then
+  echo SUCCESS || exit 0
+else
+  echo FAIL || exit 255
 fi
 rm -rf actual.html
 
