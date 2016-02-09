@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 cd ./complete
 spring run app.groovy &
 sleep 20
