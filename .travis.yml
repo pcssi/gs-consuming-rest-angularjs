@@ -6,3 +6,10 @@ script:
 notifications:
   slack:
     secure: dRLIpg+gT+IjwyrLcmWAsgxrSgiE4uAVdtVWfRjNHDVRUoOG+2V33fRzWtU8V/4Ca8VoDLsqwCZvV3VyOVep2Btmw8B57yV2Dru5bJ5ob4gqYjqMFLrOLB08w+2DQH17PcOUt4f/Zz1R8VutS06FG/SUFpZ7qua4Twp7EbRihOs=
+before_install:
+- curl -s get.sdkman.io > ~/install_sdkman.sh
+- chmod 775 ~/install_sdkman.sh
+- ~/install_sdkman.sh
+- echo sdkman_auto_answer=true > ~/.sdkman/etc/config
+- source "~/.sdkman/bin/sdkman-init.sh"
+- sdk install springboot 1.3.0.RELEASE
