@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cd ./complete
 spring run app.groovy &
-sleep 20
+sleep 30
 curl -s http://localhost:8080 > ./actual.html
 killall "java"
 
